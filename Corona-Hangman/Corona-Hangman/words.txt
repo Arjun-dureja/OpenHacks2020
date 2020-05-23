@@ -1,0 +1,12 @@
+cold
+fever
+fourteen
+respiratory
+personal
+eyes
+nose
+mouth
+ventilation
+water
+sleeve
+physical
