@@ -33,6 +33,7 @@ class ViewController: UIViewController {
         view = UIView()
         view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
         title = "Corona Hangman"
+        
         navigationController?.navigationBar.isHidden = false
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "New Game", style: .plain, target: self, action: #selector(newGame))
         
