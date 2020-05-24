@@ -13,12 +13,17 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var playBtn: UIButton!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
-        navigationController?.navigationBar.isHidden = true
+        
         titleLabel.font = UIFont(name: "ChalkboardSE-Bold", size: 50)
-        titleLabel.widthAnchor.constraint(equalToConstant: 210).isActive = true
+        titleLabel.widthAnchor.constraint(equalToConstant: 475).isActive = true
 
         titleLabel.numberOfLines = 0
         titleLabel.textColor = .black

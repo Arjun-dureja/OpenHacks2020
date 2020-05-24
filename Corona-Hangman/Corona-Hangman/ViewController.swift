@@ -32,10 +32,9 @@ class ViewController: UIViewController {
     override func loadView() {
         view = UIView()
         view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
-        title = "Corona Hangman"
+        title = "#c🙂r☹️na hangman"
         
         navigationController?.navigationBar.isHidden = false
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "New Game", style: .plain, target: self, action: #selector(newGame))
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Hint", style: .plain, target: self, action: #selector(hintPressed))
         
@@ -150,7 +149,7 @@ class ViewController: UIViewController {
     }
     
     @objc func newGame(_ action: UIAlertAction) {
-        currentIndex = Int.random(in: 0..<words.count)
+        currentIndex = Int.random(in: 0..<words.count-1)
         currentWord = words[currentIndex!]
         
         hiddenWord = ""
@@ -164,6 +163,8 @@ class ViewController: UIViewController {
         for _ in currentWord {
             hiddenWord += "_ "
         }
+        
+        hintPressed()
     }
     
     @objc func hintPressed() {

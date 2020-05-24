@@ -10,3 +10,7 @@ ventilation
 water
 sleeve
 physical
+alcohol
+masks
+recover
+flu
